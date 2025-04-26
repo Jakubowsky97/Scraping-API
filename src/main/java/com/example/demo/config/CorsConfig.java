@@ -13,7 +13,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")  // Zezwól na żądania dla ścieżek zaczynających się od /api/
-                        .allowedOrigins("http://localhost:3000") // Domena, z której zezwalamy na żądania
+                        .allowedOrigins("http://localhost:3000", "https://scraping-web-jade.vercel.app") // Domena, z której zezwalamy na żądania
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Dozwolone metody
                         .allowedHeaders("*") // Dozwolone nagłówki
                         .allowCredentials(true); // Zezwalaj na ciasteczka/autoryzację
