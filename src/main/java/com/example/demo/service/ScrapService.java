@@ -76,8 +76,9 @@ public class ScrapService {
     public List<WebElement> getElements() {
         List<WebElement> elementList = new ArrayList<>();
         ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--headless");
-        options.addArguments("--disable-gpu");
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(ChromeDriverService.createDefaultService(), options);
