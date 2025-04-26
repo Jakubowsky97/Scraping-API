@@ -1,4 +1,4 @@
-FROM maven:3.9.6-openjdk-17 AS build
+FROM infotechsoft/maven:3.9.6-openjdk-17 AS build
 # Ustaw katalog roboczy
 WORKDIR /app
 # Kopiuj pliki projektu
