@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: Scraper_API.jar
+    env: java
+    buildCommand: ./mvnm clean package
+    startCommand: java -jar target/Scraper_API.jar
